@@ -1,0 +1,37 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#001F3F',   // Deep Navy
+          50: '#e6ecf3',
+          100: '#ccd9e7',
+          500: '#001F3F',
+          700: '#001633',
+          900: '#000d1f',
+        },
+        secondary: {
+          DEFAULT: '#0077B6',   // Azure Water
+          500: '#0077B6',
+          600: '#005f91',
+          700: '#00486d',
+        },
+        accent: {
+          DEFAULT: '#D4AF37',   // Golden Sun
+          500: '#D4AF37',
+          600: '#b9972f',
+        },
+        background: '#F0F8FF',  // Mist White
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}

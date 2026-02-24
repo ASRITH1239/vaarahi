@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+
+  /* Primary - Deep Navy */
+  --color-primary: #001F3F;
+
+  /* Secondary - Azure */
+  --color-secondary: #0077B6;
+
+  /* Accent - Gold */
+  --color-accent: #D4AF37;
+
+  /* Background - Mist White */
+  --color-background: #F0F8FF;
+}
+
+/* Infinite Scroll Animation */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
