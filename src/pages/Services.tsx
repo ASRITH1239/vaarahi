@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { Home, Phone, Building2, School, PartyPopper, Briefcase } from 'lucide-react';
 import SEO from '../components/common/SEO';
 import deliveryImg from '../assets/delivery.png';
+import pkg250ml from '../assets/package/250mlx24pckg.png';
+import pkg500ml from '../assets/package/500mlx24pckg.png';
+import pkg1l from '../assets/package/1litrex12pckg.png';
 
 const Services = () => {
     const services = [
@@ -106,6 +109,65 @@ const Services = () => {
                                 className="w-full max-h-[220px] md:max-h-[500px] object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.4)]"
                             />
                         </motion.div>
+                    </div>
+                </div>
+
+                {/* Logistics Excellence - NEW SECTION */}
+                <div className="mb-32">
+                    <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                        <div className="max-w-xl">
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="text-cyan-400 font-black text-[10px] tracking-[0.4em] uppercase mb-4"
+                            >
+                                Scale of Service
+                            </motion.div>
+                            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none mb-6">
+                                Logistics <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Excellence</span>
+                            </h2>
+                            <p className="text-cyan-100/40 font-medium leading-relaxed">
+                                We don't just deliver bottles; we manage entire hydration ecosystems for Hyderabad's largest events. Our bulk packaging is designed for efficiency and aesthetics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            { img: pkg250ml, label: "Event Ready", desc: "250ml x 24 Box" },
+                            { img: pkg500ml, label: "Retail Standard", desc: "500ml x 24 Box" },
+                            { img: pkg1l, label: "Bulk Household", desc: "1L x 12 Box" }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="relative group p-10 rounded-[3rem] bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 hover:border-cyan-500/30 transition-all duration-700 overflow-hidden"
+                            >
+                                <div className="relative aspect-square mb-8 flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-cyan-500/5 blur-3xl rounded-full scale-75 group-hover:scale-110 transition-transform duration-1000" />
+                                    <img
+                                        src={item.img}
+                                        alt={item.label}
+                                        className="h-full w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                </div>
+                                <div className="text-center relative z-10">
+                                    <h3 className="text-xl font-black text-white mb-1 tracking-tight">{item.label}</h3>
+                                    <p className="text-[10px] font-black text-cyan-400/40 uppercase tracking-widest mb-6">{item.desc}</p>
+
+                                    <a
+                                        href="tel:+919492266645"
+                                        className="inline-flex items-center px-6 py-2.5 bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-500/40 rounded-xl text-[9px] font-black text-white tracking-[0.2em] uppercase transition-all"
+                                    >
+                                        Call for Quote
+                                    </a>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
 
